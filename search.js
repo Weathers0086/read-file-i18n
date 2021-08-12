@@ -5,7 +5,8 @@ const fs = require('fs')
 const { flatOutputList } = require('./utils')
 const en = require('../../yn_job_operation/src/lang/en.js')
 
-const saveI18nPath = './1628746372228.txt'
+const saveI18nPath = './1628751066429.txt'
+const savePath = './未使用的key-' + new Date().getTime() + '.txt'
 
 const readFile = (key, location) => { // 读取文件
   fs.readFile(location, (err, data) => {
@@ -16,6 +17,11 @@ const readFile = (key, location) => { // 读取文件
       // console.log('文件读取成功：', html)
       if (html.indexOf(key) === -1) {
         console.log('没有使用的key：', key)
+        fs.appendFile(savePath, key + '\n', err => { // 写入文件
+          if (err) {
+            console.log(err, 777)
+          }
+        })
       }
     }
   })
