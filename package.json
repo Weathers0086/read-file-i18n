@@ -1,0 +1,32 @@
+{
+  "name": "read-file-i18n",
+  "version": "1.0.0",
+  "author": "weatherWei",
+  "scripts": {
+    "new": "plop"
+  },
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
