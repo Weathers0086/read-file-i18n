@@ -11,7 +11,10 @@ function flatOutput(data, key) {
     })
     const result = {}
     Object.keys(data).forEach(key3 => {
-      result[(key ? (key + '.') : '') + key3] = data[key3]
+      if (typeof data[key3] === 'string') {
+        // console.log(key, key3)
+        result[(key ? (key + '_') : '') + key3] = data[key3]
+      }
     })
     data = result
   }
@@ -20,7 +23,7 @@ function flatOutput(data, key) {
 
 function flatOutputList(data) { // 输入对象，输出数组
   const obj = flatOutput(data)
-  const arr = [];
+  const arr = []
   Object.keys(obj).forEach(key => {
     arr.push(key)
   })
@@ -28,5 +31,6 @@ function flatOutputList(data) { // 输入对象，输出数组
 }
 
 module.exports =  {
+  flatOutput,
   flatOutputList
 }
