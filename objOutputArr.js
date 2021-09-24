@@ -5,30 +5,23 @@ const fs = require('fs')
 const { flatOutput } = require('./utils')
 const en = require('../../new_kupu_pc/src/lang/en.js')
 const id = require('../../new_kupu_pc/src/lang/id.js')
-const savePath = './output' + new Date().getTime() + '.js'
+const savePathEn = './output/new_kupu_pc_en.js'
+const savePathId = './output/new_kupu_pc_id.js'
 
-const queryI18nKey = en => { // 遍历i18n的key
-  const objEn = flatOutput(en)
-  const objId = flatOutput(id)
-  const arr = []
-  Object.keys(objEn).forEach(key => {
-    arr.push({
-      comment: "", // "备注"
-      moduleCode: 11,
-      pageName: "无",
-      roleId: 102,
-      tagName: key.replace('.', '_'),
-      zhContent: "",
-      enContent: objEn[key], // "英文",
-      idlContent: objId[key] // "印尼文",
-    })
-  })
-  const html = 'export default ' + JSON.stringify(arr)
+const saveFile = (data, savePath) => {
+  const html = 'export default ' + JSON.stringify(data)
   fs.appendFile(savePath, html, err => { // 写入文件
     if (err) {
       console.log(err, 777)
     }
   })
+}
+
+const queryI18nKey = en => { // 遍历i18n的key
+  const objEn = flatOutput(en)
+  const objId = flatOutput(id)
+  saveFile(objEn, savePathEn)
+  saveFile(objId, savePathId)
 }
 
 queryI18nKey(en)
