@@ -10,7 +10,7 @@ const savePathId = './output/new_kupu_pc_id.js'
 
 const saveFile = (data, savePath) => {
   const html = 'export default ' + JSON.stringify(data)
-  fs.appendFile(savePath, html, err => { // 写入文件
+  fs.writeFile(savePath, html, err => { // 写入文件
     if (err) {
       console.log(err, 777)
     }
