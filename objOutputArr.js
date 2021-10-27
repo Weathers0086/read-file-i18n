@@ -4,9 +4,9 @@
 const fs = require('fs')
 const { flatOutput } = require('./utils')
 const en = require('../../new_kupu_pc/src/lang/en.js')
-const id = require('../../new_kupu_pc/src/lang/id.js')
+// const id = require('../../new_kupu_pc/src/lang/id.js')
 const savePathEn = './output/new_kupu_pc_en.js'
-const savePathId = './output/new_kupu_pc_id.js'
+// const savePathId = './output/new_kupu_pc_id.js'
 
 const saveFile = (data, savePath) => {
   const html = 'export default ' + JSON.stringify(data)
@@ -19,9 +19,9 @@ const saveFile = (data, savePath) => {
 
 const queryI18nKey = en => { // 遍历i18n的key
   const objEn = flatOutput(en)
-  const objId = flatOutput(id)
+  // const objId = flatOutput(id)
   saveFile(objEn, savePathEn)
-  saveFile(objId, savePathId)
+  // saveFile(objId, savePathId)
 }
 
 queryI18nKey(en)
