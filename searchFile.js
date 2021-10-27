@@ -26,7 +26,6 @@ const readFile = location => { // 读取文件
       let count = 0
       arr.forEach(fileName => {
         if (fileName) {
-          // console.log(!searchFile(fileName))
           if(!searchFile(fileName)) {
             console.log(fileName)
             count++
