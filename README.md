@@ -3,6 +3,8 @@
 
 ```$xslt
 注意：en.js使用module.exports = 导出
+
+注意文件的编码格式：UTF-8
 ```
 
 Copyright (c) 2017-present weatherWei
