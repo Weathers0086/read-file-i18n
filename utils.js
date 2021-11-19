@@ -12,7 +12,7 @@ function flatOutput(data, key) {
     const result = {}
     Object.keys(data).forEach(key3 => {
       if (typeof data[key3] === 'string') {
-        // console.log(key, key3)
+        console.log(key, key3)
         result[(key ? (key + '.') : '') + key3] = data[key3]
         // result[(key ? (key + '.') : '') + key3] = data[key3]
       }
