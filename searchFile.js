@@ -1,5 +1,5 @@
 /**
- * 查找文件
+ * 查找文件遗漏
  * */
 const fs = require('fs')
 const text = './data.txt'
