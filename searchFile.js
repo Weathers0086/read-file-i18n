@@ -3,7 +3,7 @@
  * */
 const fs = require('fs')
 const text = './data.txt'
-const sourceFiles = '../../ccc'
+const sourceFiles = '../../data'
 
 const searchFile = (fileName) => { // 查看文件夹中是否含有该文件
   const nowDirInfo = fs.readdirSync(sourceFiles)

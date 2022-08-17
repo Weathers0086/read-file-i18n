@@ -1,11 +1,11 @@
 /**
  * 输入多层级对象，输出为一层对象
  * */
-const nameSource = 'enOld'
-const outputName = 'yn_job_operation_enOld'
+const nameSource = 'en'
+const outputName = 'new_kupu_pc_' + nameSource
 const fs = require('fs')
 const { flatOutput } = require('./utils')
-const lang = require('../yn_job_operation/src/lang/' + nameSource + '.js')
+const lang = require('../new_kupu_pc/src/lang/' + nameSource + '.js')
 const savePath = './output/' + outputName + '.js'
 
 const saveFile = (data, savePath) => {

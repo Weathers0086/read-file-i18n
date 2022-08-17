@@ -4,7 +4,7 @@
 const fs = require('fs')
 const path = require('path')
 const name = new Date().getTime()
-const savePathI18n = './' + name + '.txt'
+const savePathI18n = './output/待翻译的字段-' + name + '.txt'
 
 const sourcePath = '..\\..\\new_kupu_pc\\src'
 const ignoreList = [ // 忽略的文件

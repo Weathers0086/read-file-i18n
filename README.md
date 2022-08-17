@@ -2,14 +2,14 @@
 ### 多层嵌套的对象扁平化输出
 
 ```$xslt
-注意：en.js使用module.exports = 导出
+注意：en.js使用 module.exports = 导出
 
 注意文件的编码格式：UTF-8
 ```
 
-objOutputArr: 将多层对象输出为一级对象
-searchFile: 查找文件夹中是否有某一文件
-searchI18n: 查找未用到的i18n
-searchNoUseI18n: 查找漏使用i18n的单词
+objOutputArr.js: 将多层对象输出为一级对象
+searchFile.js: 查找文件夹中是否有某一文件
+searchI18n.js: 查找未用到的i18n
+searchNoUseI18n.js: 查找漏使用i18n的单词
 
 Copyright (c) 2017-present weatherWei

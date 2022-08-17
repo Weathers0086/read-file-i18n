@@ -4,10 +4,10 @@
 const fs = require('fs')
 const path = require('path')
 const { flatOutputList } = require('./utils')
-const en = require('../../new_kupu_pc/src/lang/en.js')
+const en = require('../new_kupu_pc/src/lang/en.js')
 const name = new Date().getTime()
-const savePathI18n = './' + name + '.txt'
-const savePathWord = './未使用的key-' + name + '.txt'
+const savePathI18n = './output/用到i18n的位置-' + name + '.txt'
+const savePathWord = './output/未使用的key-' + name + '.txt'
 
 const sourcePath = '..\\..\\new_kupu_pc\\src'
 const ignoreList = [ // 忽略的文件
