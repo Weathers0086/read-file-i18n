@@ -1,5 +1,5 @@
 /**
- * 读取文件，写入文件，查找没有用i18n的字段
+ * 读取文件，写入文件，查找没有定义i18n的字段
  * */
 const fs = require('fs')
 const path = require('path')
