@@ -27,7 +27,7 @@ const readFileI18n = location => { // 读取文件
       console.log('111', err)
     } else {
       const html = data.toString()
-      const i18nArr = html.match(/\([^)]{1,100}\)/ig)
+      const i18nArr = html.match(/\([^)]{1,200}\)/ig)
       if (i18nArr) {
         const i18nStr = i18nArr.join('')
         // console.log(`file: ${location}`, 667, i18nStr)
