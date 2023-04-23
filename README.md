@@ -2,6 +2,11 @@
 ### 多层嵌套的对象扁平化输出
 
 ```$xslt
+安装模块：
+npm install cors --save
+```
+
+```$xslt
 注意：en.js使用 module.exports = 导出
 
 注意文件的编码格式：UTF-8
